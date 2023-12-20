@@ -1,0 +1,22 @@
+Rule :
+- project API menggunakan Laravel 10
+- Menggunakan Laravel Sanctum token
+- Membuat Migrasi Table Blog dengan kolom : 
+	a. Id
+	b. Uuid
+	c. Title
+	d. Description
+	e. Image
+	f. Created_at
+	g. Updated_at
+
+Terminal = > "php artisan migrate" 
+
+- membuat seeder 2 data blog 
+Terminal -> "php artisan db:seed --class=BlogSeeder"
+
+- crud api untuk table blog 
+- kolom image hanya menerima ekstensi .jpg, .png, dan .webp
+
+- untuk melakukan CRUD blog diharuskan login terlebih dahulu untuk 
+mendapatkan Token nya lalu di input kedalam kolom "Authorization" Type "Bearer Token" 

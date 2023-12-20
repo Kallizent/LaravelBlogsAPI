@@ -24,6 +24,7 @@ Route::post('/auth/login', [AuthController::class, 'login']);
 
 Route::middleware('auth:sanctum')->group(function () {
     // Definisikan rute CRUD di sini
+
     Route::get('/blogs', [BlogController::class, 'getAllData']);
     Route::post('/blogs', [BlogController::class, 'InputData']);
     Route::get('/blogs/{id}', [BlogController::class, 'getDataById']);
