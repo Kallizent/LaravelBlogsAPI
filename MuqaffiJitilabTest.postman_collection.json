@@ -1,0 +1,189 @@
+{
+	"info": {
+		"_postman_id": "782b8595-d912-401d-98ea-cd61ccc619f9",
+		"name": "MuqaffiJitilabTest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "6192819"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "viki",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "muqaffi@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "jitilab123",
+							"type": "text"
+						}
+					]
+				},
+				"url": "127.0.0.1:8000/api/auth/register"
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "muqaffi@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "jitilab123",
+							"type": "text"
+						}
+					]
+				},
+				"url": "127.0.0.1:8000/api/auth/login"
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Blogs Data",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eA19qNwcNfC4kIkpEBdJhfKatVzYHvdq06fMVOZe09efc6ff"
+					}
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": "127.0.0.1:8000/api/blogs"
+			},
+			"response": []
+		},
+		{
+			"name": "Insert Blogs",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "Wkfy5wnvwgpcnHHEAAAKlYOUJGXtnm6Dxv8oW2GG285514d0"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "Test Jitilab",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "Ini adalah deskripsi dari Test Jitilab",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/Onion/Downloads/example1.jpg"
+						}
+					]
+				},
+				"url": "127.0.0.1:8000/api/blogs"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Blogs",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "Wkfy5wnvwgpcnHHEAAAKlYOUJGXtnm6Dxv8oW2GG285514d0"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": "127.0.0.1:8000/api/blogs/4"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Blogs Data By Id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eA19qNwcNfC4kIkpEBdJhfKatVzYHvdq06fMVOZe09efc6ff"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "127.0.0.1:8000/api/blogs/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Blogs",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "Wkfy5wnvwgpcnHHEAAAKlYOUJGXtnm6Dxv8oW2GG285514d0"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "4",
+							"type": "text"
+						},
+						{
+							"key": "title",
+							"value": "Hasil jitilab",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "Ini deskripsi ter update",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/Onion/Downloads/WhatsApp Image 2023-12-15 at 7.24.32 AM.jpeg"
+						}
+					]
+				},
+				"url": "127.0.0.1:8000/api/blogsUpdate"
+			},
+			"response": []
+		}
+	]
+}
